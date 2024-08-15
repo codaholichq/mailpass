@@ -1,19 +1,4 @@
-[package]
-name = "mailpass"
-version = "0.1.0"
-edition = "2021"
-repository = "https://github.com/codaholichq/mailpass"
-keywords = ["email", "smtp", "mx", "validation", "verification"]
-categories = ["SaaS", "B2B"]
-description = "Checks if an email address exists before sending any email"
-readme = "README.md"
-authors = ["Emmy Steven"]
-license = "MIT"
+[workspace]
+members = ["backend"]
 
-[dependencies]
-async-smtp = { version = "0.9.1" }
-axum = "0.7.5"
-serde = { version = "1.0.207", features = ["derive"] }
-serde_json = "1.0.124"
-tokio = { version = "1.39.2", features = ["full"] }
-trust-dns-resolver = "0.23.2"
+resolver = "2"
