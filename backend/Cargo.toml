@@ -1,0 +1,29 @@
+[package]
+name = "mailpass"
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/codaholichq/mailpass"
+keywords = ["email", "smtp", "mx", "validation", "verification"]
+categories = ["SaaS", "B2B"]
+description = "Checks if an email address exists before sending any email"
+readme = "README.md"
+authors = ["Emmy Steven"]
+license = "MIT"
+
+# [lib]
+# crate-type = ["cdylib"]
+
+[dependencies]
+async-smtp = { version = "0.9.1" }
+axum = "0.7.5"
+bcrypt = "0.15.1"
+chrono = "0.4.38"
+jsonwebtoken = "9.3.0"
+serde = { version = "1.0.207", features = ["derive"] }
+serde_json = "1.0.124"
+tokio = { version = "1.39.2", features = ["full"] }
+trust-dns-resolver = "0.23.2"
+
+candid = "0.10"
+ic-cdk = "0.15.0"
+ic-cdk-timers = "0.9.0"
