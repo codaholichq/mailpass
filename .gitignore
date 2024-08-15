@@ -32,14 +32,15 @@ out/
 /nbdist/
 /.nb-gradle/
 
+### MISC ###
+build/
 target/
-
-### VS Code ###
+node_modules/
+.dfx/
 .vscode/
 
 .DS_Store
 .env
 
-# Ignore Gradle build output directory
-build
-.dfx/
+
+
