@@ -1,0 +1,31 @@
+{
+  "canisters": {
+
+    "mailpass": {
+      "candid": "backend/can.did",
+      "package": "mailpass",
+      "type": "rust"
+    },
+
+    "frontend": {
+      "dependencies": [
+        "mailpass"
+      ],
+      "source": [
+        "frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "frontend"
+    }
+  },
+  
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+
+  "output_env_file": ".env",
+  "version": 1
+}
