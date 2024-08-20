@@ -14,8 +14,3 @@ pub async fn run_server() {
 
     axum::serve(listener, app).await.unwrap();
 }
-
-#[ic_cdk::query]
-fn greet(name: String) -> String {
-    format!("Hello, {}!", name)
-}

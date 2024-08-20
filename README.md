@@ -1,20 +1,20 @@
 ![Logo](https://github.com/codaholichq/mailpass/blob/main/docs/banner.webp)
 
 <div align="center">
-	<img alt="status" src="https://github.com/codaholichq/mailpass/actions/workflows/cargo.yml/badge.svg?branch=main">
+	<img alt="status" src="https://github.com/codaholichq/mailpass/actions/workflows/rust.yml/badge.svg?branch=main">
     <img alt="status" src="https://img.shields.io/badge/status-developing-brightgree">
 	<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/codaholichq/mailpass">
 	<img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/codaholichq/mailpass">
 	<img alt="GitHub stars" src="https://img.shields.io/github/stars/codaholichq/mailpass">
 	<img alt="visitors" src="https://visitor-badge.laobi.icu/badge?page_id=mailpass">
-	<a href="https://x.com/intent/tweet?hashtags=mailpass,rust,axum,oss&text=A+service+that+checkes+if+email+address+exist+without+sending+a+mail&url=https%3A%2F%2Fgithub.com%2Fcodaholichq%2Fmailpass&via=codaholichq">
+	<a href="https://x.com/intent/tweet?hashtags=mailpass,rust,axum,oss&text=A+dApp+that+checks+if+an+email+address+exists+without+sending+a+mail&url=https%3A%2F%2Fgithub.com%2Fcodaholichq%2Fmailpass&via=codaholichq">
 		<img alt="𝕏" src="https://img.shields.io/twitter/url/http/shields.io.svg?style=flat&logo=twitter">
 	</a>
 </div>
 
 <br/>
 
-Welcome to `MailPass`, a web application that checks if an email address exists before sending any email.
+Welcome to `MailPass`, a (dApp) decentralized application that checks if an email address exists before sending any email.
 
 Read the [Changelog file](https://github.com/codaholichq/mailpass/blob/main/docs/CHANGELOG.md) to see the new changes.
 
@@ -43,7 +43,7 @@ This project helps newsletter owners to:
 - Vue 3.3.4
 - Pinia 2.1.6
 - DFinity
-- VSCode 1.92.1
+- VSCode 1.92.2
 
 ## Features
 - [x] Swagger
