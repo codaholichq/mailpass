@@ -72,9 +72,9 @@ Please share this Repository within your developer community, if you think this 
 
 ## About the Author
 ### Emmy Steven
-- 𝕏 - [Emmy Steven](https://x.com/emmystevenx)
-- Blogs [codaholic.com](https://www.codaholic.com)
-- Linkedin - [Emmy Steven](https://www.linkedin.com/in/emmysteven/)
+- [𝕏](https://x.com/emmystevenx)
+- [Blog](https://www.codaholic.com)
+- [Linkedin](https://www.linkedin.com/in/emmysteven/)
 
 ## Licensing
 This project is licensed with the [MIT License](https://github.com/codaholichq/mailpass/blob/main/docs/LICENSE).
