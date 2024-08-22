@@ -10,16 +10,34 @@ readme = "README.md"
 authors = ["Emmy Steven"]
 license = "MIT"
 
-[lib]
-crate-type = ["cdylib", "lib"]
+# [lib]
+# crate-type = ["cdylib", "lib"]
+# path = "src/api/mod.rs"
+
 
 [dependencies]
+anyhow = "1.0.86"
 async-smtp = { version = "0.9.1" }
 axum = "0.7.5"
 bcrypt = "0.15.1"
 chrono = "0.4.38"
+configured = "0.7.1"
+humantime-serde = "1.1.1"
 jsonwebtoken = "9.3.0"
 serde = { version = "1.0.207", features = ["derive"] }
 serde_json = "1.0.124"
-tokio = { version = "1.39.2", features = ["macros", "rt"] }
+time = { version = "0.3.36", features = ["formatting"] }
+tokio = { version = "1.39.2", features = [
+    "macros",
+    "rt-multi-thread",
+    "signal",
+] }
+tower = { version = "0.5.0" }
+tower-http = { version = "0.5", features = ["trace"] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", default-features = false, features = [
+    "env-filter",
+    "fmt",
+    "json",
+] }
 trust-dns-resolver = "0.23.2"
