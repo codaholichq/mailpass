@@ -1,6 +1,18 @@
-import { createPinia } from 'pinia';
-import { createApp } from 'vue';
-import './index.scss';
-import App from './App.vue';
+import './assets/main.css'
 
-createApp(App).use(createPinia()).mount('#app');
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+
+import App from './App.vue'
+import router from './router'
+
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { icon, validation } from './plugins'
+
+createApp(App)
+  .use(createPinia())
+  .use(validation)
+  .use(router)
+  .use(icon)
+  .mount('#app')

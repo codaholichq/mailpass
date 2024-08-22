@@ -1,28 +1,22 @@
 <script setup>
-import { ref } from 'vue';
-import { backend } from 'declarations/backend/index';
-let greeting = ref('');
-
-async function handleSubmit(e) {
-  e.preventDefault();
-  const target = e.target;
-  const name = target.querySelector('#name').value;
-  await demo_backend.greet(name).then((response) => {
-    greeting.value = response;
-  });
-}
+import { RouterView } from 'vue-router';
+import AppHeader from '@/components/Header.vue';
+import AppFooter from "@/components/Footer.vue";
 </script>
 
 <template>
-  <main>
-    <img src="/logo2.svg" alt="DFINITY logo" />
-    <br />
-    <br />
-    <form action="#" @submit="handleSubmit">
-      <label for="name">Enter your name: &nbsp;</label>
-      <input id="name" alt="Name" type="text" />
-      <button type="submit">Click Me!</button>
-    </form>
-    <section id="greeting">{{ greeting }}</section>
-  </main>
+  <AppHeader />
+  <div class="col-md-6 offset-md-3 mt-5 mb-5">
+    <RouterView />
+  </div>
+  <AppFooter />
 </template>
+
+<style>
+.mt-5 {
+  padding-top: 6rem;
+}
+.mb-5 {
+  padding-bottom: 2rem;
+}
+</style>
