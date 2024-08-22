@@ -1,0 +1,14 @@
+services:
+  mailpass:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        RUST_VERSION: 1.80.1
+    environment:
+      - RUST_LOG=mailpass=debug,info
+    expose:
+      - "3000"
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
