@@ -12,20 +12,6 @@ const router = createRouter({
     },
 
     {
-      path: '/dashboard/members/add',
-      name: 'AddMember',
-      meta: { requiresAuth: true },
-      component: () => import('@/views/members/AddMember.vue')
-    },
-
-    {
-      path: '/dashboard/members',
-      name: 'GetMembers',
-      meta: { requiresAuth: true },
-      component: () => import('@/views/members/GetMembers.vue')
-    },
-
-    {
       path: '/dashboard/users/add',
       name: 'AddUser',
       meta: { requiresAuth: true },
@@ -37,20 +23,6 @@ const router = createRouter({
       name: 'GetUsers',
       meta: { requiresAuth: true },
       component: () => import('@/views/users/GetUsers.vue')
-    },
-
-    {
-      path: '/dashboard/units',
-      name: 'GetUnits',
-      meta: { requiresAuth: true },
-      component: () => import('@/views/Units/GetUnits.vue')
-    },
-
-    {
-      path: '/dashboard/units/add',
-      name: 'AddUnit',
-      meta: { requiresAuth: true },
-      component: () => import('@/views/Units/AddUnit.vue')
     },
 
     {

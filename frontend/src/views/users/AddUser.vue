@@ -3,9 +3,7 @@
     <div class="card">
       <h4 class="card-header">Add User</h4>
       <div class="card-body">
-
         <Form @submit="add" :validation-schema="schema" v-slot="{ errors, loading }">
-
           <div class="form-group col-md-12 mt-3">
             <Field
               type="email"
@@ -82,7 +80,9 @@
             </button>
           </div>
 
-          <div v-if="errors.apiError" class="alert alert-danger mt-3 mb-0">{{ errors.apiError }}</div>
+          <div v-if="errors.apiError" class="alert alert-danger mt-3 mb-0">
+            {{ errors.apiError }}
+          </div>
         </Form>
       </div>
     </div>
@@ -90,25 +90,24 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import * as yup from 'yup';
-import { useMemberStore, useUserStore } from '@/stores';
+import { ref } from "vue";
+import * as yup from "yup";
+import { useUserStore } from "@/stores";
 
-const userStore = useUserStore()
-const memberStore = useMemberStore();
+const userStore = useUserStore();
 
 const loading = ref(false);
-const message = ref('');
-const member = ref({})
+const message = ref("");
+const member = ref({});
 
 const schema = yup.object().shape({
-  email: yup.string().required('Email is required!'),
-  roles: yup.string().required('Role is required!')
+  email: yup.string().required("Email is required!"),
+  roles: yup.string().required("Role is required!"),
 });
 
 const add = (data, { resetForm }) => {
   loading.value = true;
-  data.roles = data.roles.split(','); // convert roles to array of strings
+  data.roles = data.roles.split(","); // convert roles to array of strings
 
   userStore.add(data).then(
     () => {
@@ -123,28 +122,11 @@ const add = (data, { resetForm }) => {
         error.toString();
     }
   );
-}
+};
 
 const search = (event) => {
   const email = event.target.value;
-
-  memberStore.search(email).then(
-    (data) => {
-      console.log(data)
-      member.value = data
-
-      const firstLetter = data.firstName.charAt(0);
-      member.value.username = (firstLetter + data.lastName).toLowerCase();
-    },
-    (error) => {
-      message.value =
-        (error.response && error.response.data && error.response.data.message) ||
-        error.message ||
-        error.toString();
-    }
-  )
-}
+};
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
