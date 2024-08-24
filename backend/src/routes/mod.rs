@@ -8,7 +8,7 @@ use tower_http::cors::{Any, CorsLayer};
 use tower_http::trace::{self, TraceLayer};
 use tracing::Level;
 
-use crate::services::email_validator::validate_email;
+use crate::services::mail::check;
 
 pub fn setup_routes() -> Router {
     tracing_subscriber::fmt()
@@ -18,7 +18,7 @@ pub fn setup_routes() -> Router {
 
     Router::new()
         .route("/", get(home))
-        .route("/email", post(validate_email))
+        .route("/email", post(check))
         .route("/health", get(health))
         .route("/error", get(error))
         .layer(

@@ -6,11 +6,11 @@ use serde_json::json;
 use trust_dns_resolver::TokioAsyncResolver;
 
 #[derive(Deserialize)]
-pub struct EmailRequest {
+pub struct Request {
     pub email: String,
 }
 
-pub async fn validate_email(Json(payload): Json<EmailRequest>) -> impl IntoResponse {
+pub async fn check(Json(payload): Json<Request>) -> impl IntoResponse {
     let email = &payload.email;
     let parts: Vec<&str> = email.split('@').collect();
 
