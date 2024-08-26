@@ -5,7 +5,7 @@
   "type": "module",
   
   "scripts": {
-    "start": "vite --port 8080",
+    "start": "vite --port 8080 --host",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
